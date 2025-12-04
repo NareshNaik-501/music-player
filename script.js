@@ -21,254 +21,47 @@ let playing_song = false;
 //create a audio element
 let track = document.createElement('audio');
 
-// All songs list
-let All_song =[
-    {
-        name: "Choosi chudangane song_mp3",
-        path: "music/song1.mp3",
-        img: "images/picks.jpg",
-        singer: "Anurag Kulkarni, Saagar Mahati"
-    },
-    {
-        name: "Adigaa Adigaa song_mp3",
-        path: "music/song2.mp3",
-        img: "images/picks.jpg",
-        singer: "Balakrishna, Srikanth,Jaiswal "
-    },
-    {
-        name: "Bangaru Kodipetta Song_mp3",
-        path: "music/song3.mp3",
-        img: "images/picks.jpg",
-        singer: "Ranjith, Shivani"
-    },
-    {
-        name: "Banthi poola janiki song_mp3",
-        path: "music/song4.mp3",
-        img: "images/picks.jpg",
-        singer: "Jr.NTR, Kajal-Agarwal"
-    },
-    {
-        name: "Boss party Song_mp3",
-        path: "music/song5.mp3",
-        img: "images/picks.jpg",
-        singer: "Nakash Aziz, DSP, Haripriya"
-    },
-    {
-        name: "Aanandama madike Song_mp3",
-        path: "music/song6.mp3",
-        img: "images/picks.jpg",
-        singer: "Sid Sriram, Satya Yamini"
-    },
-    {
-        name: "bagundalamma Song_mp3",
-        path: "music/song7.mp3",
-        img: "images/picks.jpg",
-        singer: "Ramu"
-    },
-    {
-        name: "pournami flute_music mp3",
-        path: "music/song8.mp3",
-        img: "images/picks.jpg",
-        singer: "Kiran and team"
-    },
-    {
-        name: "Dhruva Dhruva song mp3",
-        path: "music/song9.mp3",
-        img: "images/picks.jpg",
-        singer: "Amit mishra"
-    },
-    {
-        name: "Nijamena song mp3",
-        path: "music/song18.mp3",
-        img: "images/picks.jpg",
-        singer: "Karthik, Suchitra"
-    },
-    {
-        name: "Kalala kadhala song mp3",
-        path: "music/song10.mp3",
-        img: "images/picks.jpg",
-        singer: "Harini Ivaturi"
-    },
-    {
-        name: "cheliya cheliya song mp3",
-        path: "music/song11.mp3",
-        img: "images/picks.jpg",
-        singer: "K.K Suchitra"
-    },
-    {
-        name: "Rubberu gajulu song mp3",
-        path: "music/song12.mp3",
-        img: "images/picks.jpg",
-        singer: "DelerMehendi, Pranavi"
-    },
-    {
-        name: "Samajavaragamana mp3",
-        path: "music/song13.mp3",
-        img: "images/picks.jpg",
-        singer: "Sid Sriram"
-    },
-    {
-        name: "Thar Maar Thakkar Maar song mp3",
-        path: "music/song14.mp3",
-        img: "images/picks.jpg",
-        singer: "Shreya Ghosal"
-    },
-    {
-        name: "Maaro Maaro rey song mp3",
-        path: "music/song15.mp3",
-        img: "images/picks.jpg",
-        singer: "Rahul Nambiar, Suchitra"
-    },
-    {
-        name: "maate vinadhuga song mp3",
-        path: "music/song16.mp3",
-        img: "images/picks.jpg",
-        singer: "Sid Sriram"
-    },
-    {
-        name: "vachadura song mp3",
-        path: "music/song17.mp3",
-        img: "images/picks.jpg",
-        singer: "Koti,M.M.Keeravani,Ranjith"
-    },
-    {
-        name: "Gore Gore song mp3",
-        path: "music/song19.mp3",
-        img: "images/picks.jpg",
-        singer: "Karthik, Jyotsna"
-    },
-    {
-        name: "Ninnela Ninnela Song mp3",
-        path: "music/song18.mp3",
-        img: "images/picks.jpg",
-        singer: "Anurag kulkarni,Sherya Goshal"
-    },
-    {
-        name: "Choosi chudangane song_mp3",
-        path: "music/song19.mp3",
-        img: "images/picks.jpg",
-        singer: "Anurag Kulkarni, Saagar Mahati"
-    },
-    {
-        name: "Adigaa Adigaa song_mp3",
-        path: "music/song20.mp3",
-        img: "images/picks.jpg",
-        singer: "Balakrishna, Srikanth,Jaiswal "
-    },
-    {
-        name: "Bangaru Kodipetta Song_mp3",
-        path: "music/song21.mp3",
-        img: "images/picks.jpg",
-        singer: "Ranjith, Shivani"
-    },
-    {
-        name: "Banthi poola janiki song_mp3",
-        path: "music/song22.mp3",
-        img: "images/picks.jpg",
-        singer: "Jr.NTR, Kajal-Agarwal"
-    },
-    {
-        name: "Boss party Song_mp3",
-        path: "music/song23.mp3",
-        img: "images/picks.jpg",
-        singer: "Nakash Aziz, DSP, Haripriya"
-    },
-    {
-        name: "Aanandama madike Song_mp3",
-        path: "music/song24.mp3",
-        img: "images/picks.jpg",
-        singer: "Sid Sriram, Satya Yamini"
-    },
-    {
-        name: "bagundalamma Song_mp3",
-        path: "music/song25.mp3",
-        img: "images/picks.jpg",
-        singer: "Ramu"
-    },
-    {
-        name: "pournami flute_music mp3",
-        path: "music/song26.mp3",
-        img: "images/picks.jpg",
-        singer: "Kiran and team"
-    },
-    {
-        name: "Dhruva Dhruva song mp3",
-        path: "music/song27.mp3",
-        img: "images/picks.jpg",
-        singer: "Amit mishra"
-    },
-    {
-        name: "Nijamena song mp3",
-        path: "music/song28.mp3",
-        img: "images/picks.jpg",
-        singer: "Karthik, Suchitra"
-    },
-    {
-        name: "maate vinadhuga song mp3",
-        path: "music/song29.mp3",
-        img: "images/picks.jpg",
-        singer: "Sid Sriram"
-    },
-    {
-        name: "Kalala kadhala song mp3",
-        path: "music/song30.mp3",
-        img: "images/picks.jpg",
-        singer: "Harini Ivaturi"
-    },
-    {
-        name: "cheliya cheliya song mp3",
-        path: "music/song31.mp3",
-        img: "images/picks.jpg",
-        singer: "K.K Suchitra"
-    },
-    {
-        name: "Rubberu gajulu song mp3",
-        path: "music/song32.mp3",
-        img: "images/picks.jpg",
-        singer: "DelerMehendi, Pranavi"
-    },
-    {
-        name: "Samajavaragamana mp3",
-        path: "music/song33.mp3",
-        img: "images/picks.jpg",
-        singer: "Sid Sriram"
-    },
-    {
-        name: "Thar Maar Thakkar Maar song mp3",
-        path: "music/song34.mp3",
-        img: "images/picks.jpg",
-        singer: "Shreya Ghosal"
-    },
-    {
-        name: "Maaro Maaro rey song mp3",
-        path: "music/song35.mp3",
-        img: "images/picks.jpg",
-        singer: "Rahul Nambiar, Suchitra"
-    },
-    {
-        name: "maate vinadhuga song mp3",
-        path: "music/song36.mp3",
-        img: "images/picks.jpg",
-        singer: "Sid Sriram"
-    },
-    {
-        name: "maate vinadhuga song mp3",
-        path: "music/song37.mp3",
-        img: "images/picks.jpg",
-        singer: "Sid Sriram"
-    },
-    {
-        name: "vachadura song mp3",
-        path: "music/song38.mp3",
-        img: "images/picks.jpg",
-        singer: "Koti,M.M.Keeravani,Ranjith"
-    },
-    {
-        name: "Gore Gore song mp3",
-        path: "music/song39.mp3",
-        img: "images/picks.jpg",
-        singer: "Karthik, Jyotsna"
-    }
+// All songs list — generated to match actual files in the `music/` folder
+let All_song = [
+    { name: "song1", path: "music/song1.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song2", path: "music/song2.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song3", path: "music/song3.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song4", path: "music/song4.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song5", path: "music/song5.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song6", path: "music/song6.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song7", path: "music/song7.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song8", path: "music/song8.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song9", path: "music/song9.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song10", path: "music/song10.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song11", path: "music/song11.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song12", path: "music/song12.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song13", path: "music/song13.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song14", path: "music/song14.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song15", path: "music/song15.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song16", path: "music/song16.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song17", path: "music/song17.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song18", path: "music/song18.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song19", path: "music/song19.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song20", path: "music/song20.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song21", path: "music/song21.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song22", path: "music/song22.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song23", path: "music/song23.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song24", path: "music/song24.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song25", path: "music/song25.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song26", path: "music/song26.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song27", path: "music/song27.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song28", path: "music/song28.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song29", path: "music/song29.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song30", path: "music/song30.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song31", path: "music/song31.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song32", path: "music/song32.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song33", path: "music/song33.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song34", path: "music/song34.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song35", path: "music/song35.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song36", path: "music/song36.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song37", path: "music/song37.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song38", path: "music/song38.mp3", img: "images/picks.jpg", singer: "" },
+    { name: "song39", path: "music/song39.mp3", img: "images/picks.jpg", singer: "" }
 ];
 
 // All function
@@ -294,7 +87,7 @@ load_track(index_no);
 // mute sound fun
 function mute_sound(){
     track.volume = 0;
-    volume.value = 0;
+    recent_volume.value = 0;
     volume_show.innerHTML = 0;
 }
 
@@ -323,7 +116,7 @@ function playsong(){
 function pausesong(){
     track.pause();
     playing_song = false;
-    play.innerHTML = '<i class="fa fa-pause"></i>';
+    play.innerHTML = '<i class="fa fa-play"></i>';
 }
 
 
@@ -347,7 +140,7 @@ function previous_song(){
         load_track(index_no);
         playsong();
     }else{
-        index_no = All_song.length;
+        index_no = All_song.length - 1;
         load_track(index_no);
         playsong(); 
     }
@@ -361,7 +154,7 @@ function volume_change(){
 
 // change slider position
 function change_duration(){
-    slider_position = track.duration * (slider.value / 100);
+    let slider_position = track.duration * (slider.value / 100);
     track.currentTime = slider_position;
 }
 
@@ -386,8 +179,9 @@ function range_slider(){
 // function will run when the song is over 
     if (track.ended){
         play.innerHTML = '<i class="fa fa-play"></i>';
-        if(autoplay = 1){
+        if(autoplay == 1){
             index_no += 1;
+            if(index_no >= All_song.length) index_no = 0;
             load_track(index_no);
             playsong();
         }

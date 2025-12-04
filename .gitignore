@@ -5,7 +5,8 @@
 New folder/
 
 # Large media - keep locally, do not track
-music/*.mp3
+# Large media - keep locally, do not track
+# music/*.mp3
 
 # OS files
 Thumbs.db
