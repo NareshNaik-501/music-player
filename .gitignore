@@ -1,0 +1,18 @@
+# Visual Studio and editor files
+.vs/
+
+# Temporary folders accidentally uploaded
+New folder/
+
+# Large media - keep locally, do not track
+music/*.mp3
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Node deps
+node_modules/
+
+# Environment
+.env
