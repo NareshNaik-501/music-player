@@ -349,7 +349,7 @@ function previous_song(){
     }else{
         index_no = All_song.length;
         load_track(index_no);
-        playsong();
+        playsong(); 
     }
 }
 
